@@ -1,0 +1,75 @@
+.col-md-6Personalizado{
+    flex:0 0 auto;
+    width:50%
+}
+
+.display-6Personalizado{
+    font-size:calc(1rem + 1.2vw);
+    font-weight:400;
+    line-height:1.2;
+}
+@media (min-width:1200px){
+    .display-6Personalizado{font-size:1.5rem}
+}
+
+.leadPersonalizado{
+    font-size:1rem;
+    font-weight: lighter;
+}
+
+.my-5Personalizado{
+    margin-top:6rem!important;
+    margin-bottom:6rem!important
+}
+
+.nomeProduto{
+    margin: 2rem 0;
+}
+
+.botaoComprar{
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.display-6-2Personalizado{
+    font-size: 33px;
+    color: rgb(42, 88, 255);
+}
+
+.descricaoTitulo{
+    font-size: 1.05rem;
+    color: rgb(42, 88, 255);
+    font-weight: 500;
+}
+
+.descricaoCompleta{
+    color: rgba(0, 0, 0, 0.829);
+    font-size: 0.95rem;
+    padding: 0.7rem;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+}
+
+.iconeCart{
+    font-size: 20px;   
+}
+
+.spinner-borderPersonalizado{
+    display:inline-block;
+    width:2rem;
+    height:2rem;
+    vertical-align:-.125em;
+    -webkit-animation:1s linear infinite spinner-border;
+    animation:1s linear infinite spinner-border
+}
+
+.imagemLogoCarregando{
+    height: 30px;
+    display: flex;
+    flex: column;
+}
+
+.escritoCarregando{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 1rem 0;
+}

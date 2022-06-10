@@ -9,7 +9,6 @@ import {
   BsCreditCard2Back,
 } from "react-icons/bs";
 
-import "./PopupDepart.css";
 import "./Navegacao.css";
 import "./NavegacaoTelaMedia.css";
 import "./NavegacaoMobile.css"
@@ -163,70 +162,70 @@ const Navegacao = () => {
 
                   {/* <p onClick={() => console.log("clicou")} id='todosDepartamentos'>Todos os Departamentos</p> */}
                   <a
-                    href="https://youtube.com"
+                    href={`https://www.carrefour.com.br/colecao/9558/?map=productClusterIds&order=OrderByTopSaleDESC#crfimt=hm-tlink|carrefour|menu|campanha|ofertas-do-dia|1|030322`}
                     target="_blank"
                     rel="noreferrer"
                   >
                     Ofertas do Dia
                   </a>
                   <a
-                    href="https://youtube.com"
+                    href={`https://www.carrefour.com.br/dia-dos-namorados#crfimt=hm-tlink|carrefour|menu|campanha|dia-dos-namorados|2|030622`}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Mundo Gamer
+                    Dia dos Namorados
                   </a>
                   <a
-                    href="https://youtube.com"
+                    href={`https://www.carrefour.com.br/Celulares-Smartphones-e-Smartwatches/Smartphones#crfimt=hm-tlink|carrefour|menu|campanha|smartphones|3|090522`}
                     target="_blank"
                     rel="noreferrer"
                   >
                     Smartphones
                   </a>
                   <a
-                    href="https://youtube.com"
+                    href={`https://www.carrefour.com.br/pneus-e-auto#crfimt=hm-tlink|carrefour|menu|campanha|pneus-e-auto|4|090522`}
                     target="_blank"
                     rel="noreferrer"
                   >
                     Pneus e Auto
                   </a>
                   <a
-                    href="https://youtube.com"
+                    href={`https://www.carrefour.com.br/busca/xiaomi?order=OrderByTopSaleDESC#crfimt=hm-tlink|carrefour|menu|campanha|xiaomi|5|090522`}
                     target="_blank"
                     rel="noreferrer"
                   >
                     Xiaomi
                   </a>
                   <a
-                    href="https://youtube.com"
+                    href={`https://www.carrefour.com.br/informatica/notebook#crfimt=hm-tlink|carrefour|menu|campanha|notebooks|6|090522`}
                     target="_blank"
                     rel="noreferrer"
                   >
                     Notebooks
                   </a>
                   <a
-                    href="https://youtube.com"
+                    href={`https://www.carrefour.com.br/eletrodomesticos#crfimt=hm-tlink|carrefour|menu|campanha|eletrodomesticos|7|090522`}
                     target="_blank"
                     rel="noreferrer"
                   >
                     Eletrodomésticos
                   </a>
                   <a
-                    href="https://youtube.com"
+                    href={`https://www.carrefour.com.br/tvs-e-video/tvs#crfimt=hm-tlink|carrefour|menu|campanha|tvs|8|090522`}
                     target="_blank"
                     rel="noreferrer"
                   >
                     TVs
                   </a>
                   <a
-                    href="https://youtube.com"
+                    href={`https://www.carrefour.com.br/moveis#crfimt=hm-tlink|carrefour|menu|campanha|moveis|9|090522`}
                     target="_blank"
                     rel="noreferrer"
                   >
                     Móveis
                   </a>
                   <a
-                    href="https://youtube.com"
+                    href={`https://www.carrefour.com.br/ccv/?utm_source=carrefour&utm_medium=ecom-menu`}
                     target="_blank"
                     rel="noreferrer"
                     id="cartao"
@@ -241,9 +240,7 @@ const Navegacao = () => {
           </div>
         </div>
             <a
-              href="https://www.carrefour.com.br/"
-              target="_blank"
-              rel="noreferrer"
+              href="/"
             >
               <img id="imagemLogoCarrefourComNome" src={logo} alt="logo" />
             </a>
@@ -259,7 +256,7 @@ const Navegacao = () => {
           <div className="varios-icones">
             <div className="user-container">
               <a
-                href="https://youtube.com"
+                href="https://www.carrefour.com.br/login?returnUrl=%2F"
                 target="_blank"
                 rel="noreferrer"
                 className="user-container-bemVindo"
@@ -273,7 +270,7 @@ const Navegacao = () => {
             </div>
             <div className="user-container">
               <a
-                href="https://youtube.com"
+                href={`https://www.carrefour.com.br/meucarrefour`}
                 target="_blank"
                 rel="noreferrer"
                 className="user-container-meuCarrefour"
@@ -289,7 +286,7 @@ const Navegacao = () => {
             </div>
             <div className="user-container">
               <a
-                href="https://youtube.com"
+                href={`https://www.carrefour.com.br/account#/orders`}
                 target="_blank"
                 rel="noreferrer"
                 className="user-container-meusPedidos"
@@ -303,7 +300,7 @@ const Navegacao = () => {
             </div>
             <div className="user-container">
               <a
-                href="https://youtube.com"
+                href={`https://www.carrefour.com.br/account#/lists`}
                 target="_blank"
                 rel="noreferrer"
                 className="user-container-minhasListas"
@@ -317,7 +314,7 @@ const Navegacao = () => {
             </div>
             <div className="user-container">
               <a
-                href="https://youtube.com"
+                href={`https://www.carrefour.com.br/checkout`}
                 target="_blank"
                 rel="noreferrer"
                 className="user-container-carrinho"
@@ -340,43 +337,79 @@ const Navegacao = () => {
               </div>
 
               {/* <p onClick={() => console.log("clicou")} id='todosDepartamentos'>Todos os Departamentos</p> */}
-              <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                Ofertas do Dia
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                Mundo Gamer
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                Smartphones
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                Pneus e Auto
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                Xiaomi
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                Notebooks
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                Eletrodomésticos
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                TVs
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                Móveis
-              </a>
               <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noreferrer"
-                id="cartao"
-              >
-                <BsCreditCard2Back id="cardIcon" />
-                Cartão Carrefour
-                {/* <p id='mensagemCartao'></p> */}
-              </a>
+                    href={`https://www.carrefour.com.br/colecao/9558/?map=productClusterIds&order=OrderByTopSaleDESC#crfimt=hm-tlink|carrefour|menu|campanha|ofertas-do-dia|1|030322`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Ofertas do Dia
+                  </a>
+                  <a
+                    href={`https://www.carrefour.com.br/dia-dos-namorados#crfimt=hm-tlink|carrefour|menu|campanha|dia-dos-namorados|2|030622`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Dia dos Namorados
+                  </a>
+                  <a
+                    href={`https://www.carrefour.com.br/Celulares-Smartphones-e-Smartwatches/Smartphones#crfimt=hm-tlink|carrefour|menu|campanha|smartphones|3|090522`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Smartphones
+                  </a>
+                  <a
+                    href={`https://www.carrefour.com.br/pneus-e-auto#crfimt=hm-tlink|carrefour|menu|campanha|pneus-e-auto|4|090522`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Pneus e Auto
+                  </a>
+                  <a
+                    href={`https://www.carrefour.com.br/busca/xiaomi?order=OrderByTopSaleDESC#crfimt=hm-tlink|carrefour|menu|campanha|xiaomi|5|090522`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Xiaomi
+                  </a>
+                  <a
+                    href={`https://www.carrefour.com.br/informatica/notebook#crfimt=hm-tlink|carrefour|menu|campanha|notebooks|6|090522`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Notebooks
+                  </a>
+                  <a
+                    href={`https://www.carrefour.com.br/eletrodomesticos#crfimt=hm-tlink|carrefour|menu|campanha|eletrodomesticos|7|090522`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Eletrodomésticos
+                  </a>
+                  <a
+                    href={`https://www.carrefour.com.br/tvs-e-video/tvs#crfimt=hm-tlink|carrefour|menu|campanha|tvs|8|090522`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    TVs
+                  </a>
+                  <a
+                    href={`https://www.carrefour.com.br/moveis#crfimt=hm-tlink|carrefour|menu|campanha|moveis|9|090522`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Móveis
+                  </a>
+                  <a
+                    href={`https://www.carrefour.com.br/ccv/?utm_source=carrefour&utm_medium=ecom-menu`}
+                    target="_blank"
+                    rel="noreferrer"
+                    id="cartao"
+                  >
+                    <BsCreditCard2Back id="cardIcon" />
+                    Cartão Carrefour
+                    {/* <p id='mensagemCartao'></p> */}
+                  </a>
             </div>
           </div>
         </div>

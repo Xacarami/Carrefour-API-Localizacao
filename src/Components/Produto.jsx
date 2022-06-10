@@ -7,17 +7,25 @@ import carina from "../assets/fale-com-Carina.jpg";
 import "./Produto.css"
 
 function Produto() {
-  const { id } = useParams();
-  const { mercado } = useParams();
-  const [escolhido, setEscolhido] = useState([]);
-  const [loading, setLoading] = useState(false);
 
-  const [data, setData] = useState([]);
-  const [state, setState] = useState(data);
-  const [filter, setFilter] = useState(data);
-  // const [loading, setLoading] = useState(false);
-  const [post, setPost] = useState(null);
+        // Arquivo criado para cada produto encontrado na Api
+
+
+    // Pega o id do produto na Url
+  const { id } = useParams();
+    // Pega da Url e prova que mudou de mercado
+  const { mercado } = useParams();
+    // um Toggle de se está ou não carregando a página
+  const [loading, setLoading] = useState(false);
+    // Guarda a array do mercado, lido da api
+  const [filter, setFilter] = useState([]);
+
+
   let componentMounted = true;
+
+      // Lê a Api, retornando para o Filter os Produtos
+      // disponíveis nesse mercado (retorna todos, mais
+      // abaixo fará um "selecionador")
 
   useEffect(() => {
     const getProduto = async () => {
@@ -25,29 +33,19 @@ function Produto() {
       const response = await fetch(
         `https://mercado.carrefour.com.br/api/catalog_system/pub/products/search?fq=${mercado}`
       );
-      // setProduto(await response.json());
       setFilter(await response.json());
       setLoading(false);
     };
     getProduto();
   }, []);
 
-  // const [cepFeito, setCepFeito] = useState("02225030");
-  // const [cepCompletado, setCepCompletdo] = useState("");
-
-  // useEffect(() => {
-  //   axios.get(`${baseURLCep}`).then((response) => {
-  //     setPost(response.data[0].sellers[1].name);
-  //   });
-  // }, [cepFeito]);
-
-  // const baseURLCep = `https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=${cepFeito}`;
+      // Dá a função de voltar a página no Icone de seta
   const navigate = useNavigate();
   const voltarTela = () => {
     navigate(-1);
   }
 
-
+      // É executado quando a tela estiver carregando
   const Loading = () => {
     return <>
     <span className="escritoCarregando">Carregando...</span>
@@ -59,14 +57,22 @@ function Produto() {
     </>;
   };
 
+
+      // É executado quando a página carrega
   const MostrarProduto = () => {
+      // Pega e renderiza as informações do produto
+      // específico, diferenciado pela sua ID
+
     return (
       <>
         {filter.map((produto) => {
+            // O id selecionado na api é o mesmo clicado? Se sim, vai para o return
           if (produto.productId == id) {
             let preco = `${produto.items[0].sellers[0].commertialOffer.Installments[11].Value}`;
             let precoComVirgula = preco.replace(".", ",");
             return (
+
+                // Estrutura como título, local, tamanho do produto
               <>
                 <div className="col-md-6">
                   <img
@@ -105,11 +111,13 @@ function Produto() {
       <button className="setaDeVoltarTela" onClick={voltarTela}><IoArrowBackSharp /></button>
         <div className="container">
           <div className="row">
+            {/* Lógica em que, se a página terminar de carregar, renderizará o produto */}
             {loading ? <Loading /> : <MostrarProduto />}
           </div>
         </div>
             {loading ? "" :
           <>
+            {/* Banner da AI Carina */}
           <a
           href={`https://api.whatsapp.com/send?phone=551130042222&text=Ol%C3%A1!%20Eu%20sou%20a%20Carina%2C%20assistente%20virtual%20do%20Carrefour.%20Precisa%20de%20ajuda%3F%20Manda%20um%20Oi%20pra%20mim`}
           target="_blank"

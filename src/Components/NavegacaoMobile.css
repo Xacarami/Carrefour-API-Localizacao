@@ -1,4 +1,4 @@
-        /* Feito para telas de celulares */
+        /* Feito para telas Mobiles (smartphones) */
 
         @media screen and (max-width: 720px){
 
@@ -192,6 +192,9 @@
                 margin: 0 0px 0 0;
             }
         
+                /* Campo azul aparece apenas em telas desktop
+                Em mobile está dentro da caixa acessível pelo ícone */
+
             .sugestoesDesktop{
                 display: none;
             }
@@ -240,7 +243,9 @@
                 margin-left: -2%;
                 display: flex;
             }
-            
+
+                /* Campo de pesquisa */
+
             #input-search{
                 float:left;
                 justify-content: center;

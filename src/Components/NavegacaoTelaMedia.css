@@ -1,4 +1,4 @@
-        /* Feito para telas entre celular e monitor */
+        /* Feito para telas Médias (tablets) */
 
 @media screen and (max-width: 1210px) and (min-width: 720px) {
 
@@ -146,6 +146,8 @@
         margin-right: 10px;
     }
 
+    
+        /* Botao padrao do bootstrap, porém personalizado */
     .btn-primarySegundo{
         color:#fff;
         background-color:#0d6efd;
@@ -182,6 +184,9 @@
     .icones{
         margin: 0 10px 0 0;
     }
+
+            /* Campo azul aparece apenas em telas desktop
+            Em mobile está dentro da caixa acessível pelo ícone */
 
     .sugestoesDesktop{
         display: none;

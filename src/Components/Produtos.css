@@ -1,3 +1,6 @@
+        /* Classes como spinner, card e btn foram tiradas do bootstrap e
+        foram pesonalizados */
+
 .procurarCep{
     display: flex;
     flex-direction: column;
@@ -23,7 +26,6 @@
     display: flex;
     font-weight:400;
     white-space: nowrap;
-    /* line-height:1.5; */
     color:white;
     text-align:center;
     text-decoration:none;
@@ -33,7 +35,6 @@
     -moz-user-select:none;
     user-select:none;
     background-color: rgb(60, 117, 250);
-    border:1px solid transparent;
     padding:.14rem .75rem;
     margin: 7px auto;
     font-size:1rem;
@@ -44,8 +45,6 @@
         box-shadow .15s ease-in-out
 }
 
-
-
 .card-footerPersonalizado{
     padding:0rem 1rem 0rem 1rem;
     background-color:rgba(0,0,0,.03);
@@ -55,15 +54,35 @@
     white-space: nowrap;
 }
 
+.card-footerBotaoPersonalizado{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.col-md-2Personalizado{
+    flex:0 0 auto;
+    width:15.66666667%;
+    margin: 5px 5px;
+    padding: 1px 3px 0 8px;
+}
+
+.precoPersonalizado{
+    font-size: 22px;
+    margin: 0 auto;
+    color: rgb(50, 101, 254);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.card-footerPersonalizado p{
+    display: flex;
+    justify-content: center;
+}
 
 
-        /* Feito para telas entre celular e monitor */
-        
-        .col-md-2Personalizado{
-            flex:0 0 auto;
-            width:15.66666667%;
-            margin: -5px 5px;
-        }
+    /* Feito para telas Mobiles e médias (Smartphones e Tablets) */
         @media screen and (max-width: 1210px) {
 
             .col-md-2Personalizado{
@@ -85,16 +104,21 @@
                 word-wrap:break-word;
                 background-color:#fff;
                 background-clip:border-box;
-                border:1px solid rgba(0,0,0,.125);
+                border:1px solid rgba(0,0,0,.1);
                 border-radius:.25rem
             }
             .precoPersonalizado{
                 font-size: 22px;
-                margin: 0;
+                margin: 0 auto;
                 color: rgb(50, 101, 254);
                 font-weight: bold;
+                display: flex;
+                justify-content: center;
             }
         }
+
+                /* Tela de tamanho específico, foi criado para não gerar problemas */
+
         @media screen and (max-width: 950px) and (min-width: 720px) {
 
             .col-md-2Personalizado{
@@ -116,16 +140,22 @@
                 word-wrap:break-word;
                 background-color:#fff;
                 background-clip:border-box;
-                border:1px solid rgba(0,0,0,.125);
+                border:1px solid rgba(0,0,0,.1);
                 border-radius:.25rem
             }
             .precoPersonalizado{
                 font-size: 22px;
-                margin: 0;
+                margin: 0 auto;
                 color: rgb(50, 101, 254);
                 font-weight: bold;
+                display: flex;
+                justify-content: center;
             }
         }
+
+
+            /* Css para telas Mobile (Smartphones) */
+
         @media screen and (max-width: 720px) {
 
             .col-md-2Personalizado{
@@ -147,15 +177,17 @@
                 word-wrap:break-word;
                 background-color:#fff;
                 background-clip:border-box;
-                border:1px solid rgba(0,0,0,.125);
+                border:1px solid rgba(0,0,0,.1);
                 border-radius:.25rem
             }
             .precoPersonalizado{
                 font-size: 16px;
                 white-space: nowrap;
-                margin: 0px;
+                margin: 0 auto;
                 color: rgb(50, 101, 254);
                 font-weight: bold;
+                display: flex;
+                justify-content: center;
             }
         }
 

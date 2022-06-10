@@ -1,3 +1,6 @@
+    /* Algumas classes foram retiradas do bootstrap param
+    poder ser personalizado e se encaixar melhor */
+
 .col-md-6Personalizado{
     flex:0 0 auto;
     width:50%
@@ -8,6 +11,10 @@
     font-weight:400;
     line-height:1.2;
 }
+
+
+    /* É mostrado apenas em telas Desktop */
+
 @media (min-width:1200px){
     .display-6Personalizado{font-size:1.5rem}
 }
@@ -53,8 +60,10 @@
     font-size: 20px;   
 }
 
+        /* Tela de carregamento */
+
 .spinner-borderPersonalizado{
-    display:inline-block;
+    display:flex;
     width:2rem;
     height:2rem;
     vertical-align:-.125em;
@@ -86,6 +95,9 @@
     justify-content: center;
     font-weight: 200;
 }
+
+
+        /* É mostrado apenas em telas Mobile */
 
 @media screen and (max-width: 720px){
     .imagemCarina{

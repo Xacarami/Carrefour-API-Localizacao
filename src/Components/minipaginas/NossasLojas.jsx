@@ -1,7 +1,11 @@
 import React from 'react'
 import "./NossasLojas.css"
 
+          // Arquivo criado para especificar o Popup quando
+          // se coloca o mouse em "Nossas Lojas"
+
 function NossasLojas() {
+
   return (
     <div>
 		<div className='escrito'>

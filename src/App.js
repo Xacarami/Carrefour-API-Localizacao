@@ -7,6 +7,9 @@ import Produto from './Components/Produto';
 function App() {
   return (
     <>
+        {/* Cria rotas. O padrão: sem barra, e carregará Home */}
+        {/* Se a url for id e mercado, irá renderizar Produto */}
+
       <Router>
         <Navegacao />
         <Routes>

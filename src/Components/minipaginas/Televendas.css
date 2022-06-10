@@ -1,3 +1,6 @@
+            /* Css para telas desktop */
+
+
 @media screen and (min-width: 1211px) {
 
     p{
@@ -41,6 +44,12 @@
     }
 }
 
+
+
+
+        /* Css feito para telas Médias */
+
+
 @media screen and (max-width: 1210px), (min-width: 720px) {
 
     p{
@@ -53,7 +62,7 @@
         color: #1554c7;
         margin: 0;
         padding: 5px 20px;
-        font-size: 18px;
+        font-size: 16px;
     }
     
     .escrito{
@@ -64,6 +73,10 @@
         background-color: #fff;
         border-radius: 15px;
     }
+
+    .escrito p{
+        font-size: 14px;
+    }
     
     .miniLetra{
         margin-top: 10px;
@@ -71,7 +84,7 @@
     
     .miniLetra p{
         
-        font-size: 11px;
+        font-size: 12px;
     }
     
     

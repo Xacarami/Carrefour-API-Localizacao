@@ -18,3 +18,14 @@ a{
     justify-content: flex-start;
     margin: 7px 10px 7px 20px;
 }
+
+@media screen and (min-width: 720px) and (max-width: 1210px){
+
+    
+    .escrito a{
+        display: flex;
+        justify-content: flex-start;
+        margin: 7px 10px 7px 20px;
+        font-size: 14px;
+    }
+}

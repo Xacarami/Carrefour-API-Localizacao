@@ -6,12 +6,17 @@ import ad3 from "../../assets/propaganda3.jpg"
 
 function DetalhesSmartphones() {
 
-//Lembrar de colocar todos os dados devolta
+		// Arquivo feito para listar todas as opções em "Todos os Departamentos"
+		// Seja as opções principais, seja as detalhadas
 
 	return (
 		<>
 		<div className='tudo'>
 			<div className="listaPrincipal">
+
+					{/* Lista em função da opções principal "Celulares e Smartphones"
+					Dentro da caixa de "Todos os Departamentos" */}
+
 				<p className="linkOpcoesPrincipais">Celulares e Smartphones</p>
 				<div className='listaTagsPrincipais'>
 					<div className="listaCelularesSmartphones">
@@ -328,6 +333,10 @@ function DetalhesSmartphones() {
 			</div>
 
 			<div className="listaPrincipal">
+
+					{/* Lista em função da opções principal "Eletrodomésticos"
+					Dentro da caixa de "Todos os Departamentos" */}
+
 				<p className="linkOpcoesPrincipais">Eletrodomésticos</p>
 				<div className='listaTagsPrincipais'>
 					<div className="listaEletrodomestico">

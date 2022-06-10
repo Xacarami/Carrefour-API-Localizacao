@@ -1,6 +1,9 @@
 import React from 'react'
-// import Popup from 'reactjs-popup';
 import "./Televendas.css"
+
+
+		// Arquivo criado para ter uma PopUp quando o mouse está
+		// em cima de "Televendas"
 
 function Televendas() {
 	return (

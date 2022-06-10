@@ -7,42 +7,33 @@ import "./Produtos.css";
 import { NavLink } from "react-router-dom";
 
 const Produtos = () => {
-  const [data, setData] = useState([]);
-  const [state, setState] = useState(data);
-  const [filter, setFilter] = useState(data);
+
+  // Recebe a array dos produtos disponíveis no mercado
+  const [filter, setFilter] = useState([]);
+    // Um Toggle de se a tela está ou não carregando
   const [loading, setLoading] = useState(false);
+    // Armazena o nome do mercado escrito no CEP
   const [mercado, setMercado] = useState(null);
-  let componentMounted = true;
-
-  useEffect(() => {
-    const getProdutos = async () => {
-      setLoading(true);
-      const response = await fetch(
-        `https://mercado.carrefour.com.br/api/catalog_system/pub/products/search?fq=${mercado}`
-      );
-      if (componentMounted) {
-        setData(await response.clone().json());
-        setFilter(await response.json());
-        setLoading(false);
-        // console.log(response);
-      }
-      return () => {
-        componentMounted = false;
-        // console.log(filter);
-      };
-    };
-    getProdutos();
-  }, []);
-
+    // Armazena o cep. O padrão é de São Paulo
   const [cepFeito, setCepFeito] = useState("02225030");
+    // Recebe o cep digitado
   const [cepCompletado, setCepCompletdo] = useState("");
 
+
+    // Função feita sempre que se digita
   const digitandoCep = (e) => {
     setCepCompletdo(e.target.value);
   };
+
+    // Função usada quando se aperta em enviar o cep.
   const passarCep = () => {
-    return setCepFeito(cepCompletado);
+    return (
+      setCepFeito(cepCompletado)
+    )
   };
+
+    // Lê a Api de quais mercados estão próximos do cep digitado ou padrão
+    // E envia o nome do mercado encontrado para o state Mercado
 
   useEffect(() => {
     axios.get(`${baseURLCep}`).then((response) => {
@@ -52,21 +43,31 @@ const Produtos = () => {
 
   const baseURLCep = `https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=${cepFeito}`;
 
-  // const baseURLProduct = `https://mercado.carrefour.com.br/api/catalog_system/pub/products/search?fq=${post}`;
 
-  // console.log(produto)
+  
+  // Lê a Api do mercado escolhido, voltando Api dos produtos disponíveis
+  
+  let componentMounted = true;
+  useEffect(() => {
+    const getProdutos = async () => {
+      setLoading(true);
+      const response = await fetch(
+        `https://mercado.carrefour.com.br/api/catalog_system/pub/products/search?fq=${mercado}`
+      );
+      if (componentMounted) {
 
-  // useEffect(() => {
-  //   axios.get(`${baseURLProduct}`).then((response) => {
-  //     let juntin = [];
-  //     let i = 0;
-  //     do {
-  //       juntin.push(response.data[i]);
-  //       setProduto(juntin);
-  //       i++;
-  //     } while (i < 10);
-  //   });
-  // });
+        // setData(await response.clone().json());
+        setFilter(await response.json());
+        setLoading(false);
+      }
+      return () => {
+        componentMounted = false;
+      };
+    };
+    getProdutos();
+  }, []);
+
+    // Quando a tela estiver carregando, será renderizado
 
   const Loading = () => {
     return (
@@ -81,10 +82,15 @@ const Produtos = () => {
     );
   };
 
+    // Só será renderizado quando a página terminar de carregar
+
   const MostrarProdutos = () => {
     return (
       <>
         {filter.map((produto) => {
+
+            // Troca o preço de . para ",", categorias de espaço para - (útil para a url se tirar o mercado)
+            // E o troca o espaço do nome do produto para - para a Url poder usar seu nome
           let preco = `${produto.items[0].sellers[0].commertialOffer.Installments[11].Value}`;
           let precoComVirgula = preco.replace(".", ",");
           let link = `${produto.categories[1]}`;
@@ -92,6 +98,7 @@ const Produtos = () => {
           let nomeDoProduto = `${produto.productName}`;
           let produtoComTraco = nomeDoProduto.replace(/ /g, "-");
 
+            // Montagem padrão dos produtos
           return (
             <>
               <div className="col-md-2Personalizado">
@@ -138,6 +145,9 @@ const Produtos = () => {
 
   return (
     <div>
+
+        {/* Campo de se digitar o cep escolhido */}
+
       <div className="procurarCep">
         <p>Digite seu cep</p>
         <div className="procurarCepInterativo">
@@ -150,6 +160,8 @@ const Produtos = () => {
           </button>
         </div>
       </div>
+
+      {/* Lógica: ta carregando? renderizado Loading. Não tá? Então renderiza os produtos */}
 
       <div className="rowPersonalizado justify-content-center">
         {loading ? <Loading /> : <MostrarProdutos />}

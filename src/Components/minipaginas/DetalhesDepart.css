@@ -1,3 +1,7 @@
+        /* Css feito para o "popup" de "Todos os Departamentos" */
+
+
+
 .listaPrincipal .listaCelularesSmartphones{
     display: none;
 }
@@ -22,24 +26,21 @@
     background-color: #fff;
     width: 205px;
     margin-bottom: 5px;
+    margin-top: -5px;
+    position: relative;
 }
 
 .listaPrincipal{
     margin-top: -5px;
 }
 
-.listaPrincipal p{
-    margin-top: -5px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
 
 .linkOpcoesPrincipais{
     font-weight: bold;
     font-size: 16px;
     margin-bottom: -1px;
     border-bottom: 1px solid rgba(0, 0, 0, .5);
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .linkOpcoesPrincipais a{
@@ -52,24 +53,17 @@
     height: auto;
     margin: -43px 0 0 204px;
     display: grid;
+    border-left: 1px solid rgba(0, 0, 0, .20);
+    background-color: #fff;
     grid-template-columns: auto auto auto ;
-    background-color: #2196F3;
     padding: 10px 0px 0px 0px;
     overflow-y: scroll;
     z-index: 1;
 }
 
-            /* Tentativa de deixar o container imóvel */
-
-/* .listaPrincipal .listaTagsPrincipais{
-    position: relative;
-    justify-content: flex-start;
-    align-items: flex-start; 
-
-            /* Apenas para enxergar */
-/*    background-color: red;
- /*   padding: 2px;
-/*} */
+.matrizes{
+    max-width: 900px;
+}
 
 .matrizes .colunas{
     background-color: transparent;
@@ -81,10 +75,6 @@
     
 }
 
-.matrizes{
-    max-width: 900px;
-}
-
 .colunas a{
     color: black;
     background-color: transparent;
@@ -93,12 +83,6 @@
     align-items: flex-start;
     margin: 0 20px 0 0;
     margin-bottom: -2px;
-}
-
-.listaDetalhada{
-    background-color: #fff;
-    border-left: 1px solid rgba(0, 0, 0, .20);
-    
 }
 
 .matrizes img{
@@ -143,6 +127,8 @@
 
 
 
+                /* Feito Para telas médias (teblet por exemplo) */
+
 
 @media screen and (min-width: 720px) and (max-width: 1210px){
     .listaPrincipal p{
@@ -151,12 +137,12 @@
         flex-direction: column;
         border-radius: 0;
         background-color: #fff;
-        width: 205px;
+        width: 203px;
         margin-bottom: 5px;
     }
     
     .listaPrincipal{
-        margin: -5px 0 0 -223px;
+        margin: -5px 0 0 -204px;
     }
     
     .tudo{
@@ -179,29 +165,16 @@
     
     .listaDetalhada{
         position: absolute;
-        /* position: absolute; */
         height: auto;
         width: 500px;
         margin: -50px 0 0 200px;
         display: grid;
         grid-template-columns:  auto auto auto ;
-        background-color: #2196F3;
+        background-color: #fff;
+        border-left: 1px solid rgba(0, 0, 0, .20);
         padding: 10px 0px 0px 100px;
-        /* overflow-x: scroll; */
     }
-    
-                /* Tentativa de deixar o container imóvel */
-    
-    /* .listaPrincipal .listaTagsPrincipais{
-        position: relative;
-        justify-content: flex-start;
-        align-items: flex-start; 
-    
-                /* Apenas para enxergar */
-    /*    background-color: red;
-     /*   padding: 2px;
-    /*} */
-    
+
     .matrizes .colunas{
         background-color: transparent;
         text-align: start;
@@ -226,11 +199,6 @@
         /* align-items: flex-start; */
         margin: 0 20px 0 0px;
         margin-bottom: -2px;
-    }
-    
-    .listaDetalhada{
-        background-color: #fff;
-        border-left: 1px solid rgba(0, 0, 0, .20);
     }
     
     .matrizes img{
@@ -275,7 +243,7 @@
 
 
 
-
+        /* Telas para Mobiles (Smartphones) */
 
 
 @media screen and (max-width: 720px){
@@ -329,28 +297,15 @@
     
     .listaDetalhada{
         position: absolute;
-        /* position: absolute; */
         height: auto;
         width: 500px;
         margin: -40px 0 0 140px;
         display: grid;
         grid-template-columns:  auto auto auto;
-        background-color: #2196F3;
+        background-color: #fff;
+        border-left: 1px solid rgba(0, 0, 0, .20);
         padding: 10px 0px 0px 100px;
-        /* overflow-x: scroll; */
     }
-    
-                /* Tentativa de deixar o container imóvel */
-    
-    /* .listaPrincipal .listaTagsPrincipais{
-        position: relative;
-        justify-content: flex-start;
-        align-items: flex-start; 
-    
-                /* Apenas para enxergar */
-    /*    background-color: red;
-     /*   padding: 2px;
-    /*} */
     
     .matrizes .colunas{
         background-color: transparent;
@@ -373,14 +328,8 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        /* align-items: flex-start; */
         margin: 0 20px 0 0px;
         margin-bottom: -2px;
-    }
-    
-    .listaDetalhada{
-        background-color: #fff;
-        border-left: 1px solid rgba(0, 0, 0, .20);
     }
     
     .matrizes img{

@@ -20,9 +20,10 @@
 }
 
 .btnPersonalizado{
-    display:inline-block;
+    display: flex;
     font-weight:400;
-    line-height:1.5;
+    white-space: nowrap;
+    /* line-height:1.5; */
     color:white;
     text-align:center;
     text-decoration:none;
@@ -34,8 +35,7 @@
     background-color: rgb(60, 117, 250);
     border:1px solid transparent;
     padding:.14rem .75rem;
-    margin-bottom: 4px;
-    margin-left: -1px;
+    margin: 7px auto;
     font-size:1rem;
 
     transition:color .15s ease-in-out,
@@ -44,52 +44,129 @@
         box-shadow .15s ease-in-out
 }
 
-.cardPersonalizado{
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    min-width:0;
-    min-height: 383px;
-    margin: 1rem 0px;
-    word-wrap:break-word;
-    background-color:#fff;
-    background-clip:border-box;
-    border:1px solid rgba(0,0,0,.125);
-    border-radius:.25rem
-}
+
 
 .card-footerPersonalizado{
     padding:0rem 1rem 0rem 1rem;
     background-color:rgba(0,0,0,.03);
-    border-top:none
-}
-
-.card-footerBotaoPersonalizado{
+    border-top:none;
     padding:.5rem 1rem;
+    display: flex;
+    white-space: nowrap;
 }
 
-.precoPersonalizado{
-    font-size: 22px;
-    margin: 0;
-    color: rgb(50, 101, 254);
-    font-weight: bold;
-}
 
-.col-md-2Personalizado{
-    flex:0 0 auto;
-    width:15.66666667%;
-    margin: -5px 5px;
-}
 
-.card-titlePersonalizado{
-    margin-bottom:.2rem;
-    font-size: 1rem;
-}
+        /* Feito para telas entre celular e monitor */
+        
+        .col-md-2Personalizado{
+            flex:0 0 auto;
+            width:15.66666667%;
+            margin: -5px 5px;
+        }
+        @media screen and (max-width: 1210px) {
+
+            .col-md-2Personalizado{
+                flex:0 0 auto;
+                width:17.66666667%;
+                margin: -5px 5px;
+            }
+            .card-titlePersonalizado{
+                margin-bottom:.2rem;
+                font-size: 1rem;
+            }
+            .cardPersonalizado{
+                position:relative;
+                display:flex;
+                flex-direction:column;
+                min-width:0;
+                min-height: 383px;
+                margin: 1rem 0px;
+                word-wrap:break-word;
+                background-color:#fff;
+                background-clip:border-box;
+                border:1px solid rgba(0,0,0,.125);
+                border-radius:.25rem
+            }
+            .precoPersonalizado{
+                font-size: 22px;
+                margin: 0;
+                color: rgb(50, 101, 254);
+                font-weight: bold;
+            }
+        }
+        @media screen and (max-width: 950px) and (min-width: 720px) {
+
+            .col-md-2Personalizado{
+                flex:0 0 auto;
+                width:21.66666667%;
+                margin: -5px 5px;
+            }
+            .card-titlePersonalizado{
+                margin-bottom:.2rem;
+                font-size: 1rem;
+            }
+            .cardPersonalizado{
+                position:relative;
+                display:flex;
+                flex-direction:column;
+                min-width:0;
+                min-height: 383px;
+                margin: 1rem 0px;
+                word-wrap:break-word;
+                background-color:#fff;
+                background-clip:border-box;
+                border:1px solid rgba(0,0,0,.125);
+                border-radius:.25rem
+            }
+            .precoPersonalizado{
+                font-size: 22px;
+                margin: 0;
+                color: rgb(50, 101, 254);
+                font-weight: bold;
+            }
+        }
+        @media screen and (max-width: 720px) {
+
+            .col-md-2Personalizado{
+                flex:0 0 auto;
+                width:28.66666667%;
+                margin: -5px 5px;
+            }
+            .card-titlePersonalizado{
+                margin-bottom:0rem;
+                font-size: 0.75rem;
+            }
+            .cardPersonalizado{
+                position:relative;
+                display:flex;
+                flex-direction:column;
+                min-width:0;
+                min-height: 300px;
+                margin: 0.5rem 0px;
+                word-wrap:break-word;
+                background-color:#fff;
+                background-clip:border-box;
+                border:1px solid rgba(0,0,0,.125);
+                border-radius:.25rem
+            }
+            .precoPersonalizado{
+                font-size: 16px;
+                white-space: nowrap;
+                margin: 0px;
+                color: rgb(50, 101, 254);
+                font-weight: bold;
+            }
+        }
+
+
 
 .card-bodyPersonalizado{
     flex:1 1 auto;
     padding:0.5rem 0.5rem;
 }
+
+
 
 .spinner-borderPersonalizado{
     display:inline-block;

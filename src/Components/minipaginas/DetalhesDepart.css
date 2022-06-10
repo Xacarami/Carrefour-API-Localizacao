@@ -1,0 +1,424 @@
+.listaPrincipal .listaCelularesSmartphones{
+    display: none;
+}
+
+.listaPrincipal:hover .listaCelularesSmartphones{
+    display: block;
+}
+
+.listaPrincipal .listaEletrodomestico{
+    display: none;
+}
+
+.listaPrincipal:hover .listaEletrodomestico{
+    display: block;
+}
+
+.listaPrincipal p{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    background-color: #fff;
+    width: 205px;
+    margin-bottom: 5px;
+}
+
+.listaPrincipal{
+    margin-top: -5px;
+}
+
+.listaPrincipal p{
+    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.linkOpcoesPrincipais{
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: -1px;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+}
+
+.linkOpcoesPrincipais a{
+    border-radius: 0;
+}
+
+.listaDetalhada{
+    position: relative;
+    position: absolute;
+    height: auto;
+    margin: -43px 0 0 204px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    background-color: #2196F3;
+    padding: 10px 0px 0px 0px;
+    overflow-y: scroll;
+    z-index: 1;
+}
+
+            /* Tentativa de deixar o container imóvel */
+
+/* .listaPrincipal .listaTagsPrincipais{
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start; 
+
+            /* Apenas para enxergar */
+/*    background-color: red;
+ /*   padding: 2px;
+/*} */
+
+.matrizes .colunas{
+    background-color: transparent;
+    text-align: start;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: -5px -20px 12px 10px;
+    
+}
+
+.matrizes{
+    max-width: 900px;
+}
+
+.colunas a{
+    color: black;
+    background-color: transparent;
+    border: none;
+    padding: 5px 110px 5px 5px;
+    align-items: flex-start;
+    margin: 0 20px 0 0;
+    margin-bottom: -2px;
+}
+
+.listaDetalhada{
+    background-color: #fff;
+    border-left: 1px solid rgba(0, 0, 0, .20);
+    
+}
+
+.matrizes img{
+    display: none;
+    position: absolute;
+    margin-left: 610px;
+    margin-top: -207px;
+    margin-bottom: auto;
+    background-color: #fff;
+    padding: 10px;
+    padding-bottom: 53px;
+}
+
+#titulo{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(45, 45, 45);
+    padding: 0px 0px 0px 0px;
+    margin-bottom: 6px;
+}
+
+#titulo:hover{
+    color: #2571ff;
+    text-decoration: underline;
+}
+
+.linkOpcoes{
+    display: flex;
+    white-space: nowrap;
+}
+
+.listaEletrodomestico .listaDetalhada .matrizes .colunas{
+    margin-right: -85px;
+}
+.listaEletrodomestico .listaDetalhada{
+    margin-top: -82px;
+}
+.listaEletrodomestico .listaDetalhada img{
+    margin-top: -205px;
+}
+
+
+
+
+
+@media screen and (min-width: 720px) and (max-width: 1210px){
+    .listaPrincipal p{
+        color: black;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+        background-color: #fff;
+        width: 205px;
+        margin-bottom: 5px;
+    }
+    
+    .listaPrincipal{
+        margin: -5px 0 0 -223px;
+    }
+    
+    .tudo{
+        margin-top: 100px;
+
+    }
+
+    .linkOpcoesPrincipais{
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: -1px;
+        border-bottom: 1px solid rgba(0, 0, 0, .5);
+    }
+    
+    .linkOpcoesPrincipais a{
+        border-radius: 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .listaDetalhada{
+        position: absolute;
+        /* position: absolute; */
+        height: auto;
+        width: 500px;
+        margin: -50px 0 0 200px;
+        display: grid;
+        grid-template-columns:  auto auto auto ;
+        background-color: #2196F3;
+        padding: 10px 0px 0px 100px;
+        /* overflow-x: scroll; */
+    }
+    
+                /* Tentativa de deixar o container imóvel */
+    
+    /* .listaPrincipal .listaTagsPrincipais{
+        position: relative;
+        justify-content: flex-start;
+        align-items: flex-start; 
+    
+                /* Apenas para enxergar */
+    /*    background-color: red;
+     /*   padding: 2px;
+    /*} */
+    
+    .matrizes .colunas{
+        background-color: transparent;
+        text-align: start;
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        margin: -5px -20px 12px 40px;
+    }
+    
+    .matrizes{
+        max-width: 900px;
+    }
+    
+    .colunas a{
+        color: black;
+        background-color: transparent;
+        border: none;
+        padding: 5px 280px 5px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* align-items: flex-start; */
+        margin: 0 20px 0 0px;
+        margin-bottom: -2px;
+    }
+    
+    .listaDetalhada{
+        background-color: #fff;
+        border-left: 1px solid rgba(0, 0, 0, .20);
+    }
+    
+    .matrizes img{
+        position: absolute;
+        margin-left: 610px;
+        margin-top: -207px;
+        margin-bottom: auto;
+        background-color: #fff;
+        padding: 10px;
+        padding-bottom: 53px;
+    }
+    
+    #titulo{
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(45, 45, 45);
+        padding: 0px 0px 0px 0px;
+        margin-bottom: 6px;
+    }
+    
+    #titulo:hover{
+        color: #2571ff;
+        text-decoration: underline;
+    }
+    
+    .linkOpcoes{
+        display: flex;
+        white-space: nowrap;
+    }
+    
+    .listaEletrodomestico .listaDetalhada .matrizes .colunas{
+        margin-right: -85px;
+    }
+    .listaEletrodomestico .listaDetalhada{
+        margin-top: -82px;
+    }
+    .listaEletrodomestico .listaDetalhada img{
+        margin-top: -205px;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 720px){
+    .listaPrincipal .listaCelularesSmartphones{
+        display: none;
+    }
+    
+    .listaPrincipal:hover .listaCelularesSmartphones{
+        display: block;
+    }
+    
+    .listaPrincipal .listaEletrodomestico{
+        display: none;
+    }
+    
+    .listaPrincipal:hover .listaEletrodomestico{
+        display: block;
+    }
+    
+    .listaPrincipal p{
+        color: black;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+        background-color: #fff;
+        width: 205px;
+        margin-bottom: 5px;
+    }
+    
+    .listaPrincipal{
+        margin: -5px 0 0 -223px;
+    }
+    
+    .tudo{
+        margin-top: 100px;
+
+    }
+
+    .linkOpcoesPrincipais{
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: -1px;
+        border-bottom: 1px solid rgba(0, 0, 0, .5);
+    }
+    
+    .linkOpcoesPrincipais a{
+        border-radius: 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .listaDetalhada{
+        position: absolute;
+        /* position: absolute; */
+        height: auto;
+        width: 500px;
+        margin: -40px 0 0 140px;
+        display: grid;
+        grid-template-columns:  auto auto auto;
+        background-color: #2196F3;
+        padding: 10px 0px 0px 100px;
+        /* overflow-x: scroll; */
+    }
+    
+                /* Tentativa de deixar o container imóvel */
+    
+    /* .listaPrincipal .listaTagsPrincipais{
+        position: relative;
+        justify-content: flex-start;
+        align-items: flex-start; 
+    
+                /* Apenas para enxergar */
+    /*    background-color: red;
+     /*   padding: 2px;
+    /*} */
+    
+    .matrizes .colunas{
+        background-color: transparent;
+        text-align: start;
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        margin: -5px -20px 12px 40px;
+    }
+    
+    .matrizes{
+        max-width: 900px;
+    }
+    
+    .colunas a{
+        color: black;
+        background-color: transparent;
+        border: none;
+        padding: 5px 280px 5px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* align-items: flex-start; */
+        margin: 0 20px 0 0px;
+        margin-bottom: -2px;
+    }
+    
+    .listaDetalhada{
+        background-color: #fff;
+        border-left: 1px solid rgba(0, 0, 0, .20);
+    }
+    
+    .matrizes img{
+        position: absolute;
+        margin-left: 610px;
+        margin-top: -207px;
+        margin-bottom: auto;
+        background-color: #fff;
+        padding: 10px;
+        padding-bottom: 53px;
+    }
+    
+    #titulo{
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(45, 45, 45);
+        padding: 0px 0px 0px 0px;
+        margin-bottom: 6px;
+    }
+    
+    #titulo:hover{
+        color: #2571ff;
+        text-decoration: underline;
+    }
+    
+    .linkOpcoes{
+        display: flex;
+        white-space: nowrap;
+    }
+    
+    .listaEletrodomestico .listaDetalhada .matrizes .colunas{
+        margin-right: -85px;
+    }
+    .listaEletrodomestico .listaDetalhada{
+        margin-top: -82px;
+    }
+    .listaEletrodomestico .listaDetalhada img{
+        margin-top: -205px;
+    }
+
+}

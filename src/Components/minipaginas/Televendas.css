@@ -1,0 +1,85 @@
+@media screen and (min-width: 1211px) {
+
+    p{
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+    h3{
+        color: #1554c7;
+        margin: 0;
+        padding: 5px 20px;
+        font-size: 18px;
+    }
+
+    .escrito{
+        margin: 10px 0 0 10px;
+        padding: 7px 10px 10px 0px;
+        width: 240px;
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, .5);
+        background-color: #fff;
+        border-radius: 15px;
+    }
+
+    .miniLetra{
+        margin-top: 10px;
+    }
+
+    .miniLetra p{
+        
+        font-size: 11px;
+    }
+
+
+    .ativador .ativado{
+        display: none;
+    }
+
+    .ativador:hover .ativado{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1210px), (min-width: 720px) {
+
+    p{
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    h3{
+        color: #1554c7;
+        margin: 0;
+        padding: 5px 20px;
+        font-size: 18px;
+    }
+    
+    .escrito{
+        margin: 10px 0 0 10px;
+        padding: 7px 10px 10px 0px;
+        width: 240px;
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, .5);
+        background-color: #fff;
+        border-radius: 15px;
+    }
+    
+    .miniLetra{
+        margin-top: 10px;
+    }
+    
+    .miniLetra p{
+        
+        font-size: 11px;
+    }
+    
+    
+    .ativador .ativado{
+        display: none;
+    }
+    
+    .ativador:hover .ativado{
+        display: block;
+    }
+}

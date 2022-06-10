@@ -1,0 +1,20 @@
+a{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.escrito{
+    margin: 10px 0 0 10px;
+    padding: 7px 10px 10px 0px;
+    width: auto;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, .5);
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.escrito a{
+    display: flex;
+    justify-content: flex-start;
+    margin: 7px 10px 7px 20px;
+}

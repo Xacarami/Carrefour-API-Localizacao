@@ -1,53 +1,55 @@
-@media screen and (min-width:1211px) {
+        /* Feito para telas entre celular e monitor */
+
+@media screen and (max-width: 1210px) and (min-width: 720px) {
 
     /* Imagem no Topo da página */
 
     .promocao{
         display: flex;
         overflow: hidden;
-        height: 50px;
+        height: auto;
+        padding-right: 70px;
         justify-content: center;
         cursor: pointer;
     }
-    
+
         /* Opções de fundo cinza claro */
-    
+
     .servicosSuporte{
         display: flex;
         flex-direction: row;
         align-items: center;
         background-color: rgb(222, 221, 221);
-        padding: 3px 5px 0px 5%;
+        padding: 3px 5px 0px 2%;
     }
-    
+
     .abas{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         display: flex;
         padding: 0px 0px 1px 8px;
         margin-bottom: -5px;
     }
-    
+
+    .abas a p{
+        font-size: 12px;
+    }
+
     .shopping a{
         background-color: white;
         color: #2571ff;
         font-weight: bold;
         display: flex;
         border-radius: 5px 5px 0 0 ;
-        padding: 5px 14px 3px 14px;
+        padding: 5px 7px 3px 7px;
         margin-bottom: 4px;
         text-decoration: none;
     }
-    
-        .servicos a:hover{
-        background-color: rgb(13, 13, 171);
-        color: #f5f4f4;
-        }
-    
+
     .shopping a:hover{
         background-color: #f5f4f4;
         color: #1e6af6;
     }
-    
+
     .mercado a{
         background-color: rgb(208, 21, 21);
         color: #eee;
@@ -58,51 +60,54 @@
         margin-bottom: 4px;
         text-decoration: none;
     }
-    
+
     .mercado a:hover{
         background-color: rgb(194, 16, 16);
         color: #f5f4f4;
     }
-    
+
     .servicos a{
         background-color: rgb(14, 14, 193);
         color: #eee;
         font-weight: bold;
         display: flex;
         border-radius: 5px 5px 0 0 ;
-        /* margin: 0 0 2px 0px; */
         padding: 5px 14px 3px 14px;
         margin-bottom: 4px;
         text-decoration: none;
     }
-
+    
+    .servicos a:hover{
+        background-color: rgb(13, 13, 171);
+        color: #f5f4f4;
+    }
+    
+    
     .shopping p, .mercado p, .servicos p{
         margin: 0 0 0 10px;
         font-size: 14px;
     }
 
-        /* Campo de televendas, nossas lojas... */
-    
     .contatos{
         display: flex;
         position: absolute;
-        right: 70px;
+        right: 1%;
         flex-wrap: nowrap;
-        font-size: 12px;
         padding: 0 0 5px 0;
     }
-    
+
     .contatos a, .contatos p{
-        margin: 0 0 0 20px;
+        margin: 0 0 0 7px;
+        font-size: 10px;
         font-style: none;
         text-decoration: none;
         color: black;
     }
-    
+
     .contatos a:hover, .contatos p:hover{
         color: #2571ff;
     }
-    
+
     .televendas .contatoTelevendas{
         display: none;
     }
@@ -112,7 +117,7 @@
         margin: 0 0 0 -60px;
         z-index: 1;
     }
-    
+
     .nossasLojas .contatoTelevendas{
         display: none;
     }
@@ -121,20 +126,41 @@
         display: block;
         margin: 0 0 0 -27px;
     }
-    
+
     .televendas p, .nossasLojas p{
         cursor: pointer;
     }
-    
-    
+
+
         /* container branco com os icones e pesquisar */
-        /* como o bemVindo, Meu carrefour, meus pedidos, e carrinho */
+
+        .iconeTresBarras{  
+            font-size: 20px;
+            padding-top: 0px;
+            margin-top: -10px;
+            color: #0a58ca;
+        }
+
+    #botaoMobile{
+        display: block;
+        margin-right: 10px;
+    }
+
+    .btn-primarySegundo{
+        color:#fff;
+        background-color:#0d6efd;
+        border-color:#0d6efd
+    }
+    .btn-primary:hover{
+        color:#fff;background-color:#0b5ed7;
+        border-color:#0a58ca
+    }
     
     .varios-icones{
         margin-left: 3%;
         margin-right: 1%;
     }
-    
+
     .user-container-bemVindo, .user-container-meuCarrefour, .user-container-meusPedidos, .user-container-minhasListas, .user-container-carrinho{
         cursor: pointer;
         display: flex;
@@ -142,7 +168,7 @@
         color: #1e6af6;
         align-items: center;
     }
-    
+
     .user-container-bemVindo .icones, .user-container-meuCarrefour .icones, .user-container-meusPedidos .icones, .user-container-minhasListas .icones, .user-container-carrinho .icones{
         color: #1e6af6;
         border: none;
@@ -151,40 +177,32 @@
         background-color: transparent;
         display: flex;
         align-items: center;
-        margin: 0;
     }
-    
+
+    .icones{
+        margin: 0 10px 0 0;
+    }
+
+    .sugestoesDesktop{
+        display: none;
+    }
+
     .user-container-bemVindo .textoIcones, .user-container-meuCarrefour .textoIcones, .user-container-meusPedidos .textoIcones, .user-container-minhasListas .textoIcones, .user-container-carrinho .textoIcones{
+        display: none;
         color: black;
         height: 30px;
     }
-    .user-container-bemVindo:hover .textoIcones, .user-container-meuCarrefour:hover .textoIcones, .user-container-meusPedidos:hover .textoIcones, .user-container-minhasListas:hover .textoIcones, .user-container-carrinho:hover .textoIcones{
-        color: #1e6af6;
-        height: 30px;
-    }
-    
-    #bemVindo{
-        white-space: nowrap;
-    }
-    
+
     .varios-icones{
         display: flex;
         align-items: center;
     }
 
-    .varios-icones .palavraNormal, #bemVindo{
-        padding: 0;
-        margin: -2px auto;
-    }
-
-            /* Campo azul com pesquisa e icones */
-
-
     .logo-carrefour{
-        height: 36px;
+        height: 32px;
         display: flex;
     }
-    
+
     .pesquisas{    
         align-items: center;
         display: flex;
@@ -192,18 +210,16 @@
         justify-content: space-around;
         margin: 10px 50px 10px 50px;
     }
-    
+
     .pesquisas .logo-carrefour{
-        margin-right: 10px;
+        margin-right: 6px;
     }
-    
-        /* Icone de Lupa em pesquisar */
 
     .divSearch{
         background-color:#eee;
         border:solid 1px #2571ff;
         border-radius:5px;
-        width:540px;
+        width:40%;
         height:37px;
         display: flex;
     }
@@ -212,7 +228,7 @@
         float:left;
         background-color:transparent;
         padding-left:5px;
-        font-size:16px;
+        font-size:14px;
         border:none;
         height:36px;
         width:493px;
@@ -225,7 +241,7 @@
         border:none;
         float:right;
         height:35px;
-        font-size: 22px;
+        font-size: 20px;
         color: #eee;
         /* border-radius:0 5px 5px 0; */
         width:50px;
@@ -233,44 +249,29 @@
         cursor: pointer;
     }
 
-    #habilitarMobile{
-        display: none;
-    }
+        /* Garante a separação dos itens na aba de
+        pesquisas e icones */
 
-        /* Garantir separação no Campo das pesquisas e icones*/
-
-    .user-container {              
+    .user-container {
         display: flex;
         align-items: center;    
-        margin: 0px 10px 0 0px;
+        margin: 0px 8px 0 0px;
         cursor: pointer;
     }
-    
+
     .user-container p{
         flex-direction: column;
     }
-    
+
     .texto {
         display: block;
         width: 60px;
     }
-    
-    #bemVindo{
-        font-size: 10px;
-        font-weight: bold;
-    }
-    
-    .textoIcones, p {
-        font-size: 12px;
-        margin-top: 0px;
-        margin-bottom: 0;
-        padding: 0;
-    }
-    
+
     #moeda{
         color: rgb(230, 230, 2);
     }
-    
+
     #numeroCarrinho {
         background-color: green;
         width: auto;
@@ -282,82 +283,79 @@
         display: flex;
         margin: -10px 10px 5px -12px ;
     }
-    
-    
-        /* Lista de tags com fundo azul Para mobile*/
-    
 
-    .sugestoesDesktop{
-        display: block;
+
+        /* Lista de tags com fundo azul */
+
+    .offcanvas-body .sugestoes .selecoes-container .selecoes a, #todosDepartamentos{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: -120px;
+    }
+
+
+    .sugestoes{
         background-color: #2571ff;
-        height: 38px;
+        height:auto;
         display: flex;
         justify-content: center;
     }
-    
-        /* Caixa de "Todos os Departamentos" */
-
-
 
     .selecoes a, .selecoes p, .departamentoContainer{
         color: #fff;
         text-decoration: none;
         align-items: center;
-        display: inline-block;
         font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding: 5px 6px 11px 7px;
         margin: 0 4px 0 0;
         border-radius: 5px 5px 0 0;
     }
-    
-        /* Todas as tags clicáveis no campo azul */
-
-
-
-        #botaoMobile{
-            display: none;
-        }
 
     .selecoes-container{
         margin: 2px 20px;
     }
-    
-        /* Tags no campo azul quando pôr o mouse encima */
 
     .selecoes a:hover, .selecoes p:hover, .departamentoContainer:hover{
         background-color: #fff;
         color: #2571ff;
         text-decoration: underline;
     }
-    
+
+
     #cartao{
         font-size: 16px;
         font-weight: bold;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         padding: 2px 8px 11px 8px;
     }
-    
-    /* Icone de cartão */
-    #cardIcon{
+
+    #cardIcon{ 
+        display: none;
         font-size: 16px;
-        display: inline-flex;
         align-items: center;
         font-weight: bold;
-        padding: 0;
-        margin-right: 5px;
+        padding: 0 5px 0 0;
     }
 
-        /* "Lógica" que só aparece o campo dos departamentos */
-        /* quanto o mouse estiver encima */
-    
-    .departamentoContainer .opcoesDepartamentos{
+    .departamentoContainer .Departamentos{
+        display: none!important;
+    }
+
+    .opcoesDepartamentos{
         display: none;
     }
-    
+
     .departamentoContainer:hover .opcoesDepartamentos{
         display: block;
         position: absolute;
+        left: 240px;
+        top: 25px;
         z-index: 1;
     }
     .departamentoContainer:hover #todosDepartamentos{
@@ -370,14 +368,13 @@
         font-size: 16px;
         z-index: 1;
     }
-    
+
     .departamentoContainer{
         padding: 0;
         z-index: 1;
     }
 
     .setaDeVoltarTela{
-        display: none;
         position: absolute;
         font-size: 28px;
         padding: 10px;

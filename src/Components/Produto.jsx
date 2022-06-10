@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from 'react-router-dom';
+import { IoArrowBackSharp } from "react-icons/io5";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import logoSemLetra from "../assets/Carrefour-c-logo.png";
+import carina from "../assets/fale-com-Carina.jpg";
 import "./Produto.css"
 
 function Produto() {
@@ -40,6 +42,11 @@ function Produto() {
   // }, [cepFeito]);
 
   // const baseURLCep = `https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=${cepFeito}`;
+  const navigate = useNavigate();
+  const voltarTela = () => {
+    navigate(-1);
+  }
+
 
   const Loading = () => {
     return <>
@@ -52,14 +59,11 @@ function Produto() {
     </>;
   };
 
-  // console.log(id)
-
   const MostrarProduto = () => {
     return (
       <>
         {filter.map((produto) => {
           if (produto.productId == id) {
-            console.log("Opa");
             let preco = `${produto.items[0].sellers[0].commertialOffer.Installments[11].Value}`;
             let precoComVirgula = preco.replace(".", ",");
             return (
@@ -89,7 +93,6 @@ function Produto() {
               </>
             );
           } else {
-            console.log("deu nao");
           }
         })}
       </>
@@ -99,11 +102,26 @@ function Produto() {
   return (
     <>
       <div>
+      <button className="setaDeVoltarTela" onClick={voltarTela}><IoArrowBackSharp /></button>
         <div className="container">
           <div className="row">
             {loading ? <Loading /> : <MostrarProduto />}
           </div>
         </div>
+            {loading ? "" :
+          <>
+          <a
+          href={`https://api.whatsapp.com/send?phone=551130042222&text=Ol%C3%A1!%20Eu%20sou%20a%20Carina%2C%20assistente%20virtual%20do%20Carrefour.%20Precisa%20de%20ajuda%3F%20Manda%20um%20Oi%20pra%20mim`}
+          target="_blank"
+          rel="noreferrer"
+        >
+              <img src={carina} alt="Fale com a Carina" className="imagemCarina"/>
+            </a>
+            
+            <p className="mensagemFinal">Desenvolvido por Xacarami para concorrer ao TechDay do Carrefour + Digital Innovation One</p>
+          </>
+  }
+
       </div>
     </>
   );

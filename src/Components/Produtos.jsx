@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import logoSemLetra from "../assets/Carrefour-c-logo.png";
-import "./Navegacao.css"
-import "./Produtos.css"
-import { NavLink } from "react-router-dom";
 
+import "./Navegacao.css";
+import "./Produtos.css";
+import { NavLink } from "react-router-dom";
 
 const Produtos = () => {
   const [data, setData] = useState([]);
@@ -24,7 +24,6 @@ const Produtos = () => {
         setData(await response.clone().json());
         setFilter(await response.json());
         setLoading(false);
-        console.log(filter);
         // console.log(response);
       }
       return () => {
@@ -35,7 +34,6 @@ const Produtos = () => {
     getProdutos();
   }, []);
 
-
   const [cepFeito, setCepFeito] = useState("02225030");
   const [cepCompletado, setCepCompletdo] = useState("");
 
@@ -43,9 +41,7 @@ const Produtos = () => {
     setCepCompletdo(e.target.value);
   };
   const passarCep = () => {
-    return(
-      setCepFeito(cepCompletado)
-    )
+    return setCepFeito(cepCompletado);
   };
 
   useEffect(() => {
@@ -57,7 +53,6 @@ const Produtos = () => {
   const baseURLCep = `https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=${cepFeito}`;
 
   // const baseURLProduct = `https://mercado.carrefour.com.br/api/catalog_system/pub/products/search?fq=${post}`;
-
 
   // console.log(produto)
 
@@ -72,23 +67,24 @@ const Produtos = () => {
   //     } while (i < 10);
   //   });
   // });
-  
+
   const Loading = () => {
-    return <>
-    <span className="escritoCarregando">Carregando...</span>
-    <div className="d-flex justify-content-center .flex-column">
-      <div className="spinner-borderPersonalizado" role="status">
-    <img className="imagemLogoCarregando" src={logoSemLetra} alt=""/>
-  </div>
-</div>
-    </>;
+    return (
+      <>
+        <span className="escritoCarregando">Carregando...</span>
+        <div className="d-flex justify-content-center .flex-column">
+          <div className="spinner-borderPersonalizado" role="status">
+            <img className="imagemLogoCarregando" src={logoSemLetra} alt="" />
+          </div>
+        </div>
+      </>
+    );
   };
-  
+
   const MostrarProdutos = () => {
     return (
       <>
         {filter.map((produto) => {
-
           let preco = `${produto.items[0].sellers[0].commertialOffer.Installments[11].Value}`;
           let precoComVirgula = preco.replace(".", ",");
           let link = `${produto.categories[1]}`;
@@ -99,22 +95,39 @@ const Produtos = () => {
           return (
             <>
               <div className="col-md-2Personalizado">
-                <div className="cardPersonalizado" styles="width: 18rem;" key={produto.productId}>
-                  <img src={produto.items[0].images[0].imageUrl} className="card-img-top" alt="..." />
-                  <div className="card-bodyPersonalizado">
-                    <h5 className="card-titlePersonalizado">{produto.productName}</h5>
-                  </div>
+                  <div
+                    className="cardPersonalizado"
+                    styles="width: 18rem;"
+                    key={produto.productId}
+                    >
+                    <NavLink to={`/${produto.productId}/${mercado}`}>
+                    <img
+                      src={produto.items[0].images[0].imageUrl}
+                      className="card-img-top"
+                      alt="..."
+                    />
+                      </NavLink>
+                    <div className="card-bodyPersonalizado">
+                      <h5 className="card-titlePersonalizado">
+                        {produto.productName}
+                      </h5>
+                    </div>
                     <div className="card-footerPersonalizado">
                       <p className="card-text precoPersonalizado">
                         R$ {precoComVirgula}
                       </p>
                     </div>
                     <div className="card-footerBotaoPersonalizado">
-                      <NavLink to={`/${produto.productId}/${mercado}`} className="btn btn-outline-primary">
-                      Ver Produto
-                    </NavLink>
+                      <NavLink
+                        to={`/${produto.productId}/${mercado}`}
+                        className="btn btn-outline-primary"
+                      >
+                        Ver Produto
+                      </NavLink>
                     </div>
-                </div>
+                  </div>
+                  
+
               </div>
             </>
           );
@@ -128,10 +141,14 @@ const Produtos = () => {
       <div className="procurarCep">
         <p>Digite seu cep</p>
         <div className="procurarCepInterativo">
-          <input type="number" onChange={digitandoCep} value={cepCompletado} />
-          <button className="btnPersonalizado btn-primary" onClick={() => passarCep()}>Buscar</button>
+          <input type="number" placeholder="Digite seu CEP" onChange={digitandoCep} value={cepCompletado} />
+          <button
+            className="btnPersonalizado btn-primary"
+            onClick={() => passarCep()}
+          >
+            Buscar
+          </button>
         </div>
-          
       </div>
 
       <div className="rowPersonalizado justify-content-center">

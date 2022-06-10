@@ -1,0 +1,50 @@
+.popup-content{
+    margin: -10px auto auto -1px;
+    background: #fff;
+    width:50%;
+    padding:5px;
+    /* border:1px solid #d7d7d7; */
+    border: none;
+    border-top: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+[role=tooltip].popup-content{
+    width: 196px;
+    box-shadow:0px 1px 3px 0px rgba(0,0,0,.25);
+    border-radius: 0 0 5px 5px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.popupDepartamentos a{
+    color: blue;
+    text-decoration: none;
+}
+
+
+.popup-overlay{
+    background:rgba(0,0,0,.5)
+}
+
+[data-popup=tooltip].popup-overlay{
+    background:transparent;
+}
+
+.popup-arrow{
+    /* display: none; */
+    -webkit-filter:drop-shadow(0 -3px 3px rgba(0,0,0,.16));
+    filter:drop-shadow(0 -3px 3px rgba(0,0,0,.16));
+    color: #fff;
+    stroke-width:2px;
+    stroke:#d7d7d7;
+    stroke-dasharray:30px;
+    stroke-dashoffset:-54px;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0
+}

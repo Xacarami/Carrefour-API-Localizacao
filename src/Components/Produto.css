@@ -73,3 +73,31 @@
     justify-content: center;
     margin: 0 0 1rem 0;
 }
+
+.imagemCarina{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    margin: 40px 0 10px 0;
+}
+
+.mensagemFinal{
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+}
+
+@media screen and (max-width: 720px){
+    .imagemCarina{
+        height: auto;
+        width: 160%;
+        overflow: hidden;
+        margin: 10px 0 10px -27%;
+    }
+    
+    .mensagemFinal{
+        display: flex;
+        justify-content: center;
+        font-weight: 200;
+    }
+}

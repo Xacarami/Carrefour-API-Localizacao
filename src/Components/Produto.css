@@ -71,16 +71,20 @@
     animation:1s linear infinite spinner-border
 }
 
+.loadingTextoImagem{
+    display: flex;
+    flex-direction: column;
+}
+
 .imagemLogoCarregando{
     height: 30px;
     display: flex;
-    flex: column;
+    padding: 1rem auto;
 }
 
 .escritoCarregando{
     display: flex;
-    justify-content: center;
-    margin: 0 0 1rem 0;
+    margin: 0 auto;
 }
 
 .imagemCarina{

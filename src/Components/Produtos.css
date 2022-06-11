@@ -62,7 +62,7 @@
 
 .col-md-2Personalizado{
     flex:0 0 auto;
-    width:15.66666667%;
+    width:12.66666667%;
     margin: 5px 5px;
     padding: 1px 3px 0 8px;
 }
@@ -79,6 +79,22 @@
 .card-footerPersonalizado p{
     display: flex;
     justify-content: center;
+}
+
+.loadingTextoImagem{
+    display: flex;
+    flex-direction: column;
+}
+
+.imagemLogoCarregando{
+    height: 30px;
+    display: flex;
+    padding: 1rem auto;
+}
+
+.escritoCarregando{
+    display: flex;
+    margin: 0 auto;
 }
 
 
@@ -201,7 +217,8 @@
 
 
 .spinner-borderPersonalizado{
-    display:inline-block;
+    display:flex;
+    flex-direction: column;
     width:2rem;
     height:2rem;
     vertical-align:-.125em;
@@ -217,6 +234,7 @@
 
 .escritoCarregando{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: 1rem;
 }

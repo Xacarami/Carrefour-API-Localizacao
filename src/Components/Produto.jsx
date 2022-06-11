@@ -48,11 +48,14 @@ function Produto() {
       // É executado quando a tela estiver carregando
   const Loading = () => {
     return <>
-    <span className="escritoCarregando">Carregando...</span>
-    <div className="d-flex justify-content-center .flex-column">
-      <div className="spinner-borderPersonalizado" role="status">
-    <img className="imagemLogoCarregando" src={logoSemLetra} alt=""/>
-  </div>
+    <div className="loadingTextoImagem">
+      <span className="escritoCarregando">Carregando...</span>
+      <div className="d-flex justify-content-center .flex-column">
+        <div className="spinner-borderPersonalizado" role="status">
+      <img className="imagemLogoCarregando" src={logoSemLetra} alt=""/>
+    </div>
+
+    </div>
 </div>
     </>;
   };

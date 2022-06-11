@@ -17,7 +17,7 @@ const Produtos = () => {
     // Armazena o cep. O padrão é de São Paulo
   const [cepFeito, setCepFeito] = useState("02225030");
     // Recebe o cep digitado
-  const [cepCompletado, setCepCompletdo] = useState("");
+  const [cepCompletado, setCepCompletdo] = useState("02225030");
 
 
     // Função feita sempre que se digita
@@ -72,11 +72,14 @@ const Produtos = () => {
   const Loading = () => {
     return (
       <>
-        <span className="escritoCarregando">Carregando...</span>
-        <div className="d-flex justify-content-center .flex-column">
-          <div className="spinner-borderPersonalizado" role="status">
-            <img className="imagemLogoCarregando" src={logoSemLetra} alt="" />
+        <div className="loadingTextoImagem">
+          <span className="escritoCarregando">Carregando...</span>
+          <div className="d-flex justify-content-center .flex-column">
+            <div className="spinner-borderPersonalizado" role="status">
+              <img className="imagemLogoCarregando" src={logoSemLetra} alt="" />
+            </div>
           </div>
+
         </div>
       </>
     );

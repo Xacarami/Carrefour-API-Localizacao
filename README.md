@@ -1,4 +1,4 @@
-#Os commits podem ter dado algum problema depois que eu acabei dando um --force no git. Mas se olharem o meu histórico durante as semanas de criação desse projeto, verá que eu sempre atualizava, porém não há salvo os detalhes. Eu tenho alguns arquivos do início do projeto salvos no computador.
+## Os commits podem ter dado algum problema depois que eu acabei dando um --force no git. Mas se olharem o meu histórico durante as semanas de criação desse projeto, verá que eu sempre atualizava, porém não há salvo os detalhes. Eu tenho alguns arquivos do início do projeto salvos no computador.
 
 # Getting Started with Create React App
 

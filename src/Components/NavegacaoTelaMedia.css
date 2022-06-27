@@ -8,9 +8,24 @@
         display: flex;
         overflow: hidden;
         height: auto;
-        padding-right: 70px;
+        width: 100%;
+        /* object-fit: cover; */
+        margin-left: 0%;
+        /* padding-right: 70px; */
         justify-content: center;
         cursor: pointer;
+    }
+
+    .promocao a img{
+        display: flex;
+        /*overflow: hidden; */
+        overflow-x: hidden;
+        /* object-fit: fill; */
+        height: auto;
+        width: 175vw;
+        margin-left: 0%;
+        /* justify-content: center; */
+        cursor: pointer; 
     }
 
         /* Opções de fundo cinza claro */

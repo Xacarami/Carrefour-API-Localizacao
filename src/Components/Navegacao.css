@@ -5,7 +5,8 @@
     .promocao{
         display: flex;
         overflow: hidden;
-        height: 50px;
+        height: auto;
+        width: 100%;
         justify-content: center;
         cursor: pointer;
     }

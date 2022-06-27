@@ -110,9 +110,11 @@
 @media screen and (max-width: 720px){
     .imagemCarina{
         height: auto;
-        width: 160%;
+        width: 100vw;
         overflow: hidden;
-        margin: 10px 0 10px -27%;
+        overflow-x: hidden;
+        display: flex;
+        margin: 10px 0px 10px 0px;
     }
     
     .mensagemFinal{

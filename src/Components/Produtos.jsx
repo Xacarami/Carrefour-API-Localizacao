@@ -37,7 +37,7 @@ const Produtos = () => {
 
   useEffect(() => {
     axios.get(`${baseURLCep}`).then((response) => {
-      setMercado(response.data[0].sellers[1].name);
+      setMercado(response.data[0].sellers[0].name);
     });
   }, [cepFeito]);
 
@@ -105,39 +105,39 @@ const Produtos = () => {
           return (
             <>
               <div className="col-md-2Personalizado">
-                  <div
-                    className="cardPersonalizado"
-                    styles="width: 18rem;"
-                    key={produto.productId}
-                    >
-                    <NavLink to={`/${produto.productId}/${mercado}`}>
-                    <img
-                      src={produto.items[0].images[0].imageUrl}
-                      className="card-img-top"
-                      alt="..."
-                    />
-                      </NavLink>
-                    <div className="card-bodyPersonalizado">
-                      <h5 className="card-titlePersonalizado">
-                        {produto.productName}
-                      </h5>
+                <div
+                  className="cardPersonalizado"
+                  styles="width: 18rem;"
+                  key={produto.productId}
+                  >
+                  <NavLink to={`/${produto.productId}/${mercado}`}>
+                    <div className="container-img">
+                      <img
+                        src={produto.items[0].images[0].imageUrl}
+                        className="card-img-top"
+                        alt="..."
+                      />
                     </div>
-                    <div className="card-footerPersonalizado">
-                      <p className="card-text precoPersonalizado">
-                        R$ {precoComVirgula}
-                      </p>
-                    </div>
-                    <div className="card-footerBotaoPersonalizado">
-                      <NavLink
-                        to={`/${produto.productId}/${mercado}`}
-                        className="btn btn-outline-primary"
-                      >
-                        Ver Produto
-                      </NavLink>
-                    </div>
+                    </NavLink>
+                  <div className="card-bodyPersonalizado">
+                    <h5 className="card-titlePersonalizado">
+                      {produto.productName}
+                    </h5>
                   </div>
-                  
-
+                  <div className="card-footerPersonalizado">
+                    <p className="card-text precoPersonalizado">
+                      R$ {precoComVirgula}
+                    </p>
+                  </div>
+                  <div className="card-footerBotaoPersonalizado">
+                    <NavLink
+                      to={`/${produto.productId}/${mercado}`}
+                      className="btn btn-outline-primary"
+                    >
+                      Ver Produto
+                    </NavLink>
+                  </div>
+                </div>
               </div>
             </>
           );
@@ -155,12 +155,18 @@ const Produtos = () => {
         <p>Digite seu cep</p>
         <div className="procurarCepInterativo">
           <input type="number" placeholder="Digite seu CEP" onChange={digitandoCep} value={cepCompletado} />
-          <button
-            className="btnPersonalizado btn-primary"
-            onClick={() => passarCep()}
-          >
-            Buscar
-          </button>
+          <div className="botao-cep">
+            <button
+              className="btnPersonalizado btn-primary"
+              onClick={() => passarCep()}
+            >
+              Buscar
+            </button>
+          <div className="mensagem-atualizacao">
+            <p id="cep-atualizado">Cep Atualizado!</p>
+
+          </div>
+          </div>
         </div>
       </div>
 

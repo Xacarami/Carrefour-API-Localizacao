@@ -83,6 +83,7 @@ function Produto() {
                     alt={produto.productName}
                     height="350px"
                     width="auto"
+                    id="imagem-produto"
                   />
                 </div>
                 <div className="col-md-6 border my-5Personalizado">

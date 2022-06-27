@@ -56,8 +56,9 @@
 
 .card-footerBotaoPersonalizado{
     display: flex;
+    position: relative;
     justify-content: center;
-    
+    bottom: 10px;
 }
 
 .col-md-2Personalizado{
@@ -97,6 +98,57 @@
     margin: 0 auto;
 }
 
+.container-img{
+    max-height: 170px;
+    padding: auto;
+}
+
+.card-img-top{
+    height: 160px;
+    /* width: auto; */
+}
+
+.card-titlePersonalizado{
+    margin-bottom:.2rem;
+    font-size: 1rem;
+}
+
+.cardPersonalizado{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+    min-height: 353px;
+    margin: 1rem 0px;
+    word-wrap:break-word;
+    background-color:#fff;
+    background-clip:border-box;
+    border:1px solid rgba(0,0,0,.1);
+    border-radius:.25rem
+}
+
+.botao-cep .mensagem-atualizacao p{
+    color: black;
+    display: none;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    animation-name: aparicao;
+    animation-duration: 2s;
+}
+
+.botao-cep:active .mensagem-atualizacao p{
+    animation-name: aparicao;
+    animation-duration: 2s;
+    display: flex;
+}
+
+@keyframes aparicao{
+    from {display: flex;}
+    to {display: none;}
+}
+
 
     /* Feito para telas Mobiles e médias (Smartphones e Tablets) */
         @media screen and (max-width: 1210px) {
@@ -104,6 +156,76 @@
             .col-md-2Personalizado{
                 flex:0 0 auto;
                 width:17.66666667%;
+                margin: -5px 5px;
+            }
+            .card-titlePersonalizado{
+                margin-bottom:.2rem;
+                font-size: 1rem;
+            }
+            .cardPersonalizado{
+                position:relative;
+                display:flex;
+                flex-direction:column;
+                min-width:0;
+                min-height: 383px;
+                margin: 1rem 0px;
+                word-wrap:break-word;
+                background-color:#fff;
+                background-clip:border-box;
+                border:1px solid rgba(0,0,0,.1);
+                border-radius:.25rem
+            }
+            .precoPersonalizado{
+                font-size: 22px;
+                margin: 0 auto;
+                color: rgb(50, 101, 254);
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+
+    /* Feito para telas mais compridas, como as ultrawide */
+        @media screen and (max-width: 1420px) and (min-width: 1211px) {
+
+            .col-md-2Personalizado{
+                flex:0 0 auto;
+                width:14.66666667%;
+                margin: -5px 5px;
+            }
+            .card-titlePersonalizado{
+                margin-bottom:.2rem;
+                font-size: 1rem;
+            }
+            .cardPersonalizado{
+                position:relative;
+                display:flex;
+                flex-direction:column;
+                min-width:0;
+                min-height: 383px;
+                margin: 1rem 0px;
+                word-wrap:break-word;
+                background-color:#fff;
+                background-clip:border-box;
+                border:1px solid rgba(0,0,0,.1);
+                border-radius:.25rem
+            }
+            .precoPersonalizado{
+                font-size: 22px;
+                margin: 0 auto;
+                color: rgb(50, 101, 254);
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (min-width: 1550px) {
+
+            .col-md-2Personalizado{
+                flex:0 0 auto;
+                width:10.66666667%;
                 margin: -5px 5px;
             }
             .card-titlePersonalizado{
@@ -172,11 +294,45 @@
 
             /* Css para telas Mobile (Smartphones) */
 
-        @media screen and (max-width: 720px) {
-
+            @media screen and (max-width: 720px) and (min-width: 600px) {
+            
             .col-md-2Personalizado{
                 flex:0 0 auto;
                 width:28.66666667%;
+                margin: -5px 5px;
+            }
+            .card-titlePersonalizado{
+                margin-bottom:0rem;
+                font-size: 0.75rem;
+            }
+            .cardPersonalizado{
+                position:relative;
+                display:flex;
+                flex-direction:column;
+                min-width:0;
+                min-height: 300px;
+                margin: 0.5rem 0px;
+                word-wrap:break-word;
+                background-color:#fff;
+                background-clip:border-box;
+                border:1px solid rgba(0,0,0,.1);
+                border-radius:.25rem
+            }
+            .precoPersonalizado{
+                font-size: 16px;
+                white-space: nowrap;
+                margin: 0 auto;
+                color: rgb(50, 101, 254);
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+            }
+        }
+            @media screen and (max-width: 599px) {
+            
+            .col-md-2Personalizado{
+                flex:0 0 auto;
+                width:39.66666667%;
                 margin: -5px 5px;
             }
             .card-titlePersonalizado{

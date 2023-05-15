@@ -1,3 +1,20 @@
+* Projeto criado durante o bootcamp da Digital Innovation One com parceria da Carrefour. Foi feito um TechDay, onde todos que estavam no bootcamp podia criar um projeto de ecommerce que lesse uma api disponibilizada por eles, e somente 10 seriam escolhidos para apresentar diretamente aos programadores e ao RH do Carrefour. Esse é o meu projeto, e um dos escolhidos.
+* Ele foi criado principalmente para que mostrasse os produtos do mercado carrefour mais próximo do cep digitado. Para ficar mais visual, deixei que ao clicar em um produto, na url aparecesse o id do mercado mais próximo.
+
+
+### npm install
+* Para instalar todas as dependências necessárias
+### npm start
+* Para rodar o projeto em localhost:3000
+
+![image](https://github.com/Xacarami/Carrefour-API-Localizacao/assets/57050195/741299a1-f67c-4d0c-acc2-f02b1c0f8fe7)
+![image](https://github.com/Xacarami/Carrefour-API-Localizacao/assets/57050195/68babc32-cbb9-4ab3-a68d-4a111dbabd85)
+![image](https://github.com/Xacarami/Carrefour-API-Localizacao/assets/57050195/33c1cbac-a782-4f24-a9fb-ec8efc971b3d)
+![image](https://github.com/Xacarami/Carrefour-API-Localizacao/assets/57050195/317ca335-d367-4616-955f-b2d572942e9a)
+![image](https://github.com/Xacarami/Carrefour-API-Localizacao/assets/57050195/aa545856-9f68-4189-9a7a-64865bd74b4a)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

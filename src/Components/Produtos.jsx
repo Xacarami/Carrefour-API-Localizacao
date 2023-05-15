@@ -94,17 +94,19 @@ const Produtos = () => {
 
             // Troca o preço de . para ",", categorias de espaço para - (útil para a url se tirar o mercado)
             // E o troca o espaço do nome do produto para - para a Url poder usar seu nome
-          let preco = `${produto.items[0].sellers[0].commertialOffer.Installments[11].Value}`;
+          let preco = `${produto.items[0].sellers[0].commertialOffer.Installments[10].Value}`;
           let precoComVirgula = preco.replace(".", ",");
           let link = `${produto.categories[1]}`;
           let linkComTraco = link.replace(/ /g, "-");
           let nomeDoProduto = `${produto.productName}`;
           let produtoComTraco = nomeDoProduto.replace(/ /g, "-");
 
+          
             // Montagem padrão dos produtos
           return (
             <>
-              <div className="col-md-2Personalizado">
+              <div className="col-md-2Personalizado"
+              key={produto.productId}>
                 <div
                   className="cardPersonalizado"
                   styles="width: 18rem;"
